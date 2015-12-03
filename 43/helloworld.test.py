@@ -46,7 +46,6 @@ class base:
 #使用object.disconnect(id)方法取消handler2的功能
 #               self.button.disconnect(handler2)
 #设置一个不可见的横向的栏位self.box1
-                #self.box1 = gtk.HBox(gtk.False, 0)
                 self.box1 = gtk.HBox(False, 0)
 #把box1放到窗口中
                 self.window.add(self.box1)
