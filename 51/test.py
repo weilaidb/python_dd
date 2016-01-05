@@ -74,7 +74,7 @@ def main():
       for row in tables:
           print row
           try:
-             log.write('  '.join(row))
+             log.write('\t'.join(row))
           except IOError,e:
 		     log.write('no txns this month\n')
 		     log.close()
