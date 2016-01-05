@@ -81,7 +81,21 @@ def main():
 		     return
       log.write('\n')
    log.close()
-	
+def progressbar(used,total):
+   showchar = '='
+   showlen = 30  #显示字符串的总长度
+   usedrate = (used * 1.0 /total) 
+   unusedrate = ((total - used) * 1.0 /total) 
+   usedcharlen = int(showlen * usedrate)
+   unusedcharlen = int(showlen -  usedcharlen)
+   print '[' + showchar * usedcharlen + ' ' * unusedcharlen +']' + '(' + str(int(100 * usedrate)) + '%)'
+
 if __name__=="__main__":
     main()
+    progressbar(10,30)
+    progressbar(10,40)	
+    progressbar(10,50)
+    progressbar(10,60)
+    progressbar(10,1000)	
+    print '-' * 100
     # sleep(100)
