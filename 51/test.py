@@ -61,8 +61,13 @@ def excel_table_rows(file= 'file.xls',colnameindex=0,by_name=u'Sheet1'):
 	
 def main():
    # excelfilename = 'test.xlsx'
-   excelfilename = u'数据库索引规则.xlsx'
-   savetxtfile   = 'cardlog.txt'
+   #当前路径
+   # homedir = os.getcwd()
+   homedir = u'D:\\'  
+   print homedir
+   print '=' * 10
+   excelfilename = homedir + u'数据库索引规则.xlsx'
+   savetxtfile   = homedir + u'cardlog.txt'
    # tables = excel_table_byindex(excelfilename)
 
    # for row in tables:
@@ -97,5 +102,5 @@ if __name__=="__main__":
     progressbar(10,50)
     progressbar(10,60)
     progressbar(10,1000)	
-    print '-' * 100
-    # sleep(100)
+    # print '-' * 100
+    sleep(100)
